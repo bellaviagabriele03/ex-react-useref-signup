@@ -72,3 +72,45 @@ header {
     font-size: 19px;
 }
 
+.form-stone1 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-stone1 input {
+    padding: 15px;
+
+    border: 3px solid black;
+    border-radius: 20px;
+
+}
+
+.form-stone1 select {
+    padding: 15px;
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.form-stone1 button {
+
+    padding: 20px;
+    background-color: darkgray;
+    border: 3px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.form-stone1 button:hover {
+    background-color: green;
+}
+
+.form-stone1 textarea {
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
