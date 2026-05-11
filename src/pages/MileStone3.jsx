@@ -132,9 +132,11 @@ export default function MileStone3() {
                     onChange={(e) => setUserName(e.target.value)}
                     type="text" placeholder="User Name" />
 
-                <p className={userName.trim() === "" || userName.includes(" ") || userName.length < 6 || userValid ? "noValid" : "valid"}>
-                    {userName.trim() === "" || userName.includes(" ") || userName.length < 6 || userValid ? "User Name non valido" : "User Name Valido"}
-                </p>
+                {userName.trim() && (
+                    <p className={userName.trim() === "" || userName.includes(" ") || userName.length < 6 || userValid ? "noValid" : "valid"}>
+                        {userName.trim() === "" || userName.includes(" ") || userName.length < 6 || userValid ? "User Name non valido" : "User Name Valido"}
+                    </p>
+                )}
 
                 {/* INPUT PASSWORD */}
                 <input
@@ -142,10 +144,12 @@ export default function MileStone3() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password" placeholder="Password" />
-                <p
-                    className={password.length < 8 || !haveLetters || !haveNumbers ? "noValid" : "valid"}>
-                    {password.length < 8 || !haveLetters || !haveNumbers ? "password non valida" : "password valida"}
-                </p>
+                {password.trim() && (
+                    <p
+                        className={password.length < 8 || !haveLetters || !haveNumbers ? "noValid" : "valid"}>
+                        {password.length < 8 || !haveLetters || !haveNumbers ? "password non valida" : "password valida"}
+                    </p>
+                )}
 
 
                 {/* SELECT PER LA SPECIALIZZAZIONE */}
@@ -173,10 +177,12 @@ export default function MileStone3() {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     placeholder="Descrizione Sviluppatore" />
-                <p
-                    className={description.length < 100 || description.length > 1000 ? "noValid" : "valid"}>
-                    {description.length < 100 || description.trim() === "" || description.length > 1000 ? "Descrizione non valida" : "Descrizione valida"}
-                </p>
+                {description.trim() && (
+                    <p
+                        className={description.length < 100 || description.length > 1000 ? "noValid" : "valid"}>
+                        {description.length < 100 || description.trim() === "" || description.length > 1000 ? `Descrizione non valida ${description.trim().length}` : "Descrizione valida"}
+                    </p>
+                )}
 
 
                 <button type="submit">INVIA</button>
