@@ -28,6 +28,18 @@ export default function MileStone2() {
         }
     }
 
+    let haveLetters = false;
+    let haveNumbers = false;
+    for (let j = 0; j < password.length; j++) {
+        if (letters.includes(password[j])) {
+            haveLetters = true;
+        }
+        if (numbers.includes(password[j])) {
+            haveNumbers = true
+        }
+    }
+
+
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -54,6 +66,14 @@ export default function MileStone2() {
         if (password.trim().length < 8) {
             alert("password troppo corta")
             return;
+        }
+        if (!haveLetters) {
+            alert("La password deve includere almeno una lettera !")
+            return
+        }
+        if (!haveNumbers) {
+            alert("la password deve inlcudere almeno un numero")
+            return
         }
 
         if (spec.trim() === "") {
@@ -120,8 +140,8 @@ export default function MileStone2() {
                     onChange={(e) => setPassword(e.target.value)}
                     type="password" placeholder="Password" />
                 <p
-                    className={password.length < 8 ? "noValid" : "valid"}>
-                    {password.length < 8  ? "password non valida" : "password valida"}
+                    className={password.length < 8 || !haveLetters || !haveNumbers ? "noValid" : "valid"}>
+                    {password.length < 8 || !haveLetters || !haveNumbers ? "password non valida" : "password valida"}
                 </p>
                 <select
                     value={spec}
