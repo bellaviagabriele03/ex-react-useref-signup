@@ -114,3 +114,12 @@ header {
     border: 3px solid black;
     border-radius: 20px;
 }
+
+.noValid {
+    color: red;
+
+}
+
+.valid {
+    color: green;
+}
