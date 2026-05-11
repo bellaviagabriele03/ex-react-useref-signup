@@ -28,8 +28,6 @@ export default function MileStone2() {
         }
     }
 
-
-
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -123,7 +121,7 @@ export default function MileStone2() {
                     type="password" placeholder="Password" />
                 <p
                     className={password.length < 8 ? "noValid" : "valid"}>
-                    {password.length < 8 ? "password non valida" : "password valida"}
+                    {password.length < 8  ? "password non valida" : "password valida"}
                 </p>
                 <select
                     value={spec}
