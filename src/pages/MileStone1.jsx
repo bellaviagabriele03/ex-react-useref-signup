@@ -37,7 +37,7 @@ export default function MileStone1() {
 
     return (
         <div className="container">
-            <h1 className="title">MILE STONE 1</h1>
+            <h1 className="title">📌 Milestone 1: Creare un Form con Campi Controllati</h1>
             <form
                 onSubmit={handleSubmit}
                 className="form-stone1">

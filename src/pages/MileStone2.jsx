@@ -114,7 +114,7 @@ export default function MileStone2() {
 
     return (
         <div className="container">
-            <h1 className="title">MILE STONE 2</h1>
+            <h1 className="title">📌 Milestone 2: Validare in tempo reale</h1>
 
             <form
                 onSubmit={handleSubmit}
